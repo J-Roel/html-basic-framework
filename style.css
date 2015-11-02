@@ -1,0 +1,220 @@
+/*
+	STYLE.CSS:
+*/
+ 
+
+
+/* ~> ~> ~ IMPORTS ~> ~> ~>*/
+/*
+Fonts: Go to https://www.google.com/fonts and find the font you want.
+Click on the quick use button and follow the directions.
+  -The <link> is used mainly for single .html files needing the font
+			Copy/Paste the <link> in-between the <head> tags of the .html file
+  -The @import will utilize the font across all associated pages and
+			is placed here in the css file
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:500); /*LOGOS*/
+/*then copy the second part in the type tags where the font is needed*/
+
+
+
+/*STRUCTURE----------------------------STRUCTURE*/
+/*structure tags like html, body, header, etc. Don't have*/
+/* . for class or # for id*/
+html {
+	height: 100%;
+}
+
+body {
+	background-color: blue;
+}
+
+header {
+	background-color: black;
+}
+header h1 { /* h1 here will be a child of header,
+	so it will only be used inside the header tags*/
+	color: white; /*color represents the font*/
+}
+
+/*MAIN AREA OF THE WEBSITE*/
+main {
+	background-color: white;
+}
+
+/*Put this within each body container - header, footer, main, custom, etc...*/
+/*gives our page some automatic struture and centers everything on the screen*/
+.wrapper {
+	width: 980px;
+	margin: auto;
+}
+
+footer {
+ background-color: orange;
+}
+
+/* ----- =columns ----- */
+/*These will break up your wrapper/row areas into relative columns*/
+/*These are all based on the 960 grid system*/
+.one_half { width: 460px; }
+.one_third { width: 300px; }
+.two_third { width: 620px; }
+.one_fourth { width: 220px; }
+.three_fourth { width: 700px; }
+.full_column { width: 940px; }
+
+/*this sets up your columns*/
+.one_half, .one_third, .two_third, .one_fourth, .three_fourth, .full_column {
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+/* clearfix - this is important and
+clears any small things that might mess with you.
+!Make sure to place inside your wrapper before your columns!*/
+.row:before,
+.row:after {
+	content: " ";
+	clear: both;
+	display: table;
+}
+/*So your basic structure will be:
+<html>
+	<body>
+		<header>
+			<div class ="wrapper">
+				<div class="row">
+					<div class="column">
+						STUFF!
+					</div>
+					<div class="column">
+						MORE STUFF!
+					</div>
+close all tags....
+
+Each higher tag... header, main, footer... will contain the
+<structure><wrapper><row><column> hierarchy*/
+
+
+
+/*IMAGES---------------------------------------------IMAGES*/
+img {
+	width: 100%;
+	margin:auto;
+}
+
+.resize_twenty{
+	max-width:20%;
+  	max-height:20%;
+}
+.resize_seventy{
+	max-width:70%;
+  max-height:70%;
+}
+
+/*TYPE------------------------------------------------TYPE*/
+/*most common type settings*/
+h1 {
+	font-family: 'Roboto', sans-serif;
+	text-transform:uppercase;
+	font-size: 50px;
+	color: #000077;
+	text-shadow: 0 -1px 0 #888;
+}
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	color: #000077;
+}
+h3 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 28px;
+	font-weight: bold;
+	color: #444;
+}
+p {
+	font-family: 'Verdana';
+	font-size: 16px;
+	line-height: 28px;
+	color: #444;
+}
+strong {
+	font-weight:bolder;
+}
+em {
+	font-style:italic;
+}
+.quote {
+	font-style:italic;
+	font-weight:lighter;
+	text-decoration: underline ;
+}
+code {
+	font-family:;
+
+}
+
+a:link { /*a -> Anchor*/
+	text-decoration: none;
+	color: #000077;
+}
+
+/*---------Default List settings-------*/
+ul li p {
+	margin: 2px;
+}
+
+ul {
+	list-style: none;
+}
+
+.center {
+	text-align: center;
+}
+
+h1 span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  padding-top: 70%;
+  opacity: 0.25
+}
+
+
+
+/*NAVIGATION---------------------------------NAV*/
+#top-nav { /*navigation container*/
+	margin: 30px 40px 0px 0px;
+}
+#top-nav ul {
+	margin: 35px auto; /*position from top of screen*/
+	list-style: none;
+}
+#top-nav ul li {
+	display: inline-block;
+	margin-left: 0px;
+}
+#top-nav ul li a {
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: bolder;
+	color: #777;
+	text-transform: uppercase;
+	float:right;
+	padding: 5px;
+	text-align: center;
+}
+#top-nav ul li a:hover {
+	color: gray;
+}
+
+/*DECORATIONS----------------------------------DECO*/
+hr { /*horizontal rule/line */
+    height: 3px;
+    margin-bottom: 20px;
+	background-color: #dadada;
+}
